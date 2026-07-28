@@ -28,7 +28,7 @@ const translations = {
 
     // Services Section
     "services.tag": "What We Do",
-    "services.title": "Solutions to Accelerate Your Growth",
+    "services.title": "Solutions to accelerate your growth",
     "services.consulting_title": "Marketing consulting and management for businesses.",
     "services.consulting_desc": "In-depth analysis of your business model to identify optimization and scalable growth opportunities.",
     "services.explore": "Explore",
@@ -74,7 +74,7 @@ const translations = {
 
     // FAQ Section
     "faq.tag": "FREQUENTLY ASKED QUESTIONS",
-    "faq.title": "Got Questions? We Have Answers",
+    "faq.title": "Got Questions? We have answers",
     "faq.q1": "What services are included in Haras Consulting plans?",
     "faq.a1": "We offer end-to-end digital growth solutions, including strategic consulting, custom web design, omnichannel marketing campaigns, social media management, and SEO positioning tailored to your business goals.",
     "faq.q2": "Is this suitable if my business is just starting out?",
