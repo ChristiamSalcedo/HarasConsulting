@@ -196,7 +196,7 @@
   </div>
 </section>
 
-    <!-- Services Section (Bento Grid con colores personalizados y efecto hover en texto) -->
+    <!-- Services Section (Bento Grid) -->
 <section id="services" class="py-20 max-w-container-max mx-auto px-6 md:px-12 bg-[#f4f6fa]">
   <!-- Encabezado -->
   <div class="text-center mb-12">
@@ -207,7 +207,7 @@
   <!-- Bento Grid -->
   <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
     
-    <!-- 1. Consulting & Management (Tu color: #c4dafa) -->
+    <!-- 1. Consulting & Management -->
     <div class="group md:col-span-7 bg-[#c4dafa] p-8 rounded-3xl border border-[#dce5f2] shadow-[0_8px_25px_rgba(0,43,84,0.04)] hover:shadow-[0_16px_35px_rgba(0,43,84,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
       <div>
         <div class="flex items-center gap-4 bg-white/90 p-3 px-4 rounded-2xl w-fit border border-[#dce5f2] shadow-sm mb-6">
@@ -220,8 +220,8 @@
 
         <h3 class="text-2xl font-bold text-[#002B54] mb-2" data-i18n="services.consulting_title">Marketing consulting and management for businesses.</h3>
         
-        <!-- Texto con animación hover -->
-        <p class="text-slate-700 text-base leading-relaxed max-w-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.consulting_desc">
+        <!-- Visible en móviles, animación hover en PC -->
+        <p class="text-slate-700 text-base leading-relaxed max-w-lg opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300" data-i18n="services.consulting_desc">
           In-depth analysis of your business model to identify optimization and scalable growth opportunities.
         </p>
       </div>
@@ -232,7 +232,7 @@
       </a>
     </div>
 
-    <!-- 2. Web Design (Azul Marino Profundo) -->
+    <!-- 2. UX/UI Design -->
     <div class="group md:col-span-5 bg-[#002B54] text-white p-8 rounded-3xl shadow-[0_10px_30px_rgba(0,43,84,0.2)] hover:shadow-[0_18px_40px_rgba(0,43,84,0.3)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
       <div class="w-full bg-white/10 backdrop-blur-md rounded-2xl p-3.5 border border-white/15 mb-4 shadow-inner">
         <div class="flex items-center gap-1.5 mb-2">
@@ -248,14 +248,14 @@
       <div>
         <h3 class="text-2xl font-bold mb-2" data-i18n="services.web_title">UX/UI Design</h3>
         
-        <!-- Texto con animación hover -->
-        <p class="text-white/90 text-base leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.web_desc">
+        <!-- Visible en móviles, animación hover en PC -->
+        <p class="text-white/90 text-base leading-relaxed opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300" data-i18n="services.web_desc">
           UX/UI interfaces tailored to convert visitors into loyal clients.
         </p>
       </div>
     </div>
 
-    <!-- 3. Digital Marketing (Naranja Corporativo) -->
+    <!-- 3. Digital Marketing -->
     <div class="group md:col-span-4 bg-[#a33f00] text-white p-8 rounded-3xl shadow-[0_10px_30px_rgba(163,63,0,0.2)] hover:shadow-[0_18px_40px_rgba(163,63,0,0.3)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
       <div class="bg-white/15 backdrop-blur-md p-3.5 rounded-2xl w-fit border border-white/20 mb-4 shadow-inner">
         <p class="text-[10px] uppercase tracking-wider text-white/70 font-semibold">Average ROI</p>
@@ -268,14 +268,14 @@
       <div>
         <h3 class="text-2xl font-bold mb-2" data-i18n="services.mkt_title">Digital Marketing</h3>
         
-        <!-- Texto con animación hover -->
-        <p class="text-white/90 text-base leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.mkt_desc">
+        <!-- Visible en móviles, animación hover en PC -->
+        <p class="text-white/90 text-base leading-relaxed opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300" data-i18n="services.mkt_desc">
           Omnichannel campaigns that resonate with your target audience.
         </p>
       </div>
     </div>
 
-    <!-- 4. Social Strategy (Gris Lavanda) -->
+    <!-- 4. Community Manager -->
     <div class="group md:col-span-5 bg-[#e8ecf4] p-8 rounded-3xl border border-[#d2d9e6] shadow-[0_8px_25px_rgba(0,43,84,0.04)] hover:shadow-[0_16px_35px_rgba(0,43,84,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
       <div class="bg-white/90 p-3.5 rounded-2xl w-fit border border-[#d2d9e6] shadow-sm mb-4 flex items-center gap-3">
         <div class="w-9 h-9 rounded-xl bg-[#002B54]/10 flex items-center justify-center text-[#002B54]">
@@ -292,14 +292,14 @@
       <div>
         <h3 class="text-2xl font-bold text-[#002B54] mb-2" data-i18n="services.social_title">Community manager</h3>
         
-        <!-- Texto con animación hover -->
-        <p class="text-slate-600 text-base leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.social_desc">
+        <!-- Visible en móviles, animación hover en PC -->
+        <p class="text-slate-600 text-base leading-relaxed opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300" data-i18n="services.social_desc">
           Community management and content creation that drives genuine engagement and brand loyalty.
         </p>
       </div>
     </div>
 
-    <!-- 5. SEO & Positioning (Tu color: #ffd971) -->
+    <!-- 5. SEO & Positioning -->
     <div class="group md:col-span-3 bg-[#ffd971] p-8 rounded-3xl border border-[#ebd0c3] shadow-[0_8px_25px_rgba(163,63,0,0.04)] hover:shadow-[0_16px_35px_rgba(163,63,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
       <div class="bg-white/90 p-3.5 rounded-2xl shadow-sm mb-4 border border-[#ebd0c3]">
         <div class="flex items-center justify-between mb-2">
@@ -319,9 +319,9 @@
       <div>
         <h3 class="text-2xl font-bold text-[#002B54] mb-2" data-i18n="services.seo_title">SEO & Positioning</h3>
         
-        <!-- Texto con animación hover -->
-        <p class="text-slate-800 text-sm leading-relaxed text-justify opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.seo_desc">
-        Dominate search results and drive high-quality organic traffic continuously.
+        <!-- Visible en móviles, animación hover en PC -->
+        <p class="text-slate-800 text-sm leading-relaxed text-justify opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300" data-i18n="services.seo_desc">
+          Dominate search results and drive high-quality organic traffic continuously.
         </p>
       </div>
     </div>
