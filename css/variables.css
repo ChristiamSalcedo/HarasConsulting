@@ -1,0 +1,28 @@
+:root {
+  /* Colors */
+  --primary: #00356a;
+  --primary-container: #004b93;
+  --deep-navy: #002B54;
+  --secondary: #a33f00;
+  --secondary-fixed: #ffdbcd;
+  --surface: #f9f9ff;
+  --surface-gray: #F8F9FA;
+  --surface-container: #ededf4;
+  --surface-container-low: #f3f3fa;
+  --surface-container-highest: #e1e2e9;
+  --on-surface: #191c20;
+  --on-surface-variant: #424751;
+  --outline-variant: #c2c6d2;
+
+  /* Typography */
+  --font-headline: 'Hanken Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+}

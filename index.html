@@ -1,178 +1,601 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" class="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consulting Services - Marketing Digital</title>
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="meta.title">Haras Consulting | Digital Transformation</title>
 
-  <!-- Header / Menú -->
-  <header>
-    <div class="logo">
-      <img src="img/Haras.png" alt="Logo" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">INICIO</a></li>
-        <li><a href="#nosotros">SOBRE NOSOTROS</a></li>
-        <li><a href="#servicios">SERVICIOS</a></li>
-        <li><a href="#">NOVEDADES</a></li>
-        <li><a href="#contacto">CONTACTO</a></li>
-      </ul>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/Haras.png">
+
+  <!-- SEO Meta Tags Básicos -->
+  <meta name="description" content="Haras Consulting - Consultoría de marketing digital, diseño UX/UI, gestión de redes y posicionamiento SEO con resultados probados.">
+  <meta name="keywords" content="marketing digital, consultoría marketing, diseño UX UI, SEO, community manager, Haras Consulting">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://harasconsultingllc.com/">
+
+  <!-- Etiquetas Open Graph (WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harasconsultingllc.com/">
+  <meta property="og:title" content="Haras Consulting | Digital Transformation">
+  <meta property="og:description" content="Estrategias de marketing digital a medida para potenciar tu marca.">
+  <meta property="og:image" content="https://harasconsultingllc.com/img/marketing-haras.png">
+
+  <!-- Indicar a Google los idiomas disponibles -->
+  <link rel="alternate" hreflang="en" href="https://harasconsultingllc.com/?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://harasconsultingllc.com/?lang=es" />
+  <link rel="alternate" hreflang="x-default" href="https://harasconsultingllc.com/" />
+
+  <!-- Google Fonts & Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- CSS Modular -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<!-- Header / Navigation -->
+<header class="main-header fixed top-0 left-0 w-full z-50 bg-[#002B54]/95 backdrop-blur-md">
+  <div class="header-container flex items-center justify-between">
+    
+    <!-- Logo (Restaurado al tamaño grande con tu clase CSS personalizada) -->
+    <a href="#home" class="flex items-center shrink-0">
+      <img src="img/Haras.png" alt="Haras Consulting Logo" class="header-logo" />
+    </a>
+
+    <!-- Enlaces de navegación escritorio -->
+    <nav class="hidden md:flex header-nav">
+      <a class="nav-link active" href="#home" data-i18n="nav.home">Home</a>
+      <a class="nav-link" href="#about" data-i18n="nav.about">About Us</a>
+      <a class="nav-link" href="#services" data-i18n="nav.services">Services</a>
+      <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+      <a class="nav-link" href="#Q&A" data-i18n="nav.qa">Q&A</a>
     </nav>
 
-    <div class="language-toggle">
-    <img id="languageIcon" src="img/españa.png" alt="Idioma" />
+    <!-- Derecha: Idioma + CTA + Botón Hamburguesa Móvil -->
+    <div class="flex items-center gap-3 md:gap-4 shrink-0">
+      
+      <!-- Selector de Idioma -->
+      <button id="langToggleBtn" class="btn-lang">
+        <span class="material-symbols-outlined text-sm">language</span>
+        <span id="currentLangLabel">ES</span>
+      </button>
+
+      <!-- Botón CTA (Oculto en celulares con 'hidden sm:inline-flex', visible de tablet en adelante) -->
+      <a href="#contact" class="btn-cta hidden sm:inline-flex" data-i18n="nav.cta">
+        Let's Talk
+      </a>
+
+      <!-- Botón Menú Hamburguesa -->
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1 rounded-lg focus:outline-none flex items-center justify-center border border-white/20 bg-white/5">
+        <span id="menuIcon" class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+
+    </div>
+
   </div>
 
-
-  </header>
-
-  <!-- Hero Section -->
-  <section id="inicio" class="hero">
-    <div class="hero-text">
-      <h1>Consultora para empresas</h1>
-      <h2>y pequeños negocios.</h2>
-      <h3>Trabajamos en <span id="palabra-dinamica">Marketing digital.</span></h3>
-    </div>
-  </section>
-
-
-   <!-- Presentación -->
-  <section id="nosotros" class="about">
-  <h2>Queremos asegurar el éxito de tu empresa, negocio u organización.</h2>
-  <p class="destacado">Somos una consultora de marketing digital comprometida con ayudar a las marcas a crecer, consolidarse y diferenciarse en el mercado.</p>
-  <p>
-    Combinamos creatividad, análisis y tecnología para diseñar estrategias digitales personalizadas que generan resultados reales. 
-    Nuestro equipo está conformado por especialistas en publicidad online, redes sociales, posicionamiento en buscadores y diseño de experiencias digitales, 
-    lo que nos permite abordar cada proyecto con una visión integral y orientada al éxito.
-  </p>
-</section>
-
-
-  <!-- Beneficios -->
-  <section class="benefits">
-    <div class="benefit">
-      <img src="img/strategic.gif" alt="Ícono libro" class="benefit-icon">
-      <h3>Creamos una estrategia única y diseñada 100% para ti según tus necesidades.</h3>
-    </div>
-    <div class="benefit">
-      <img src="img/creativity.gif" alt="Ícono innovación" class="benefit-icon">
-      <h3>Ofrecemos soluciones innovadoras adaptadas al mundo actual, no importa cual sea el rubro.</h3>
-    </div>
-    <div class="benefit">
-      <img src="img/students.gif" alt="Ícono consultoría" class="benefit-icon">
-      <h3>Contamos con personal capacitado especialmente para cada área y listo para abordar cualquier proyecto.</h3>
-    </div>
-  </section>
-
-
-  <!-- Servicios -->
-  <section id="servicios" class="services">
-    <h2>¿Qué hacemos para que tu negocio crezca?</h2>
-    <div class="services-grid">
-      <div class="service">
-        <img src="img/consultora.gif" alt="Ícono libro" class="benefit-icon">
-        <p>Consultoría y gestión.</p>
-      </div>
-      <div class="service">
-        <img src="img/domain.gif" alt="Ícono Web" class="benefit-icon">
-        <p>Posicionamiento web.</p>
-      </div>
-      <div class="service">
-        <img src="img/diseño.gif" alt="Ícono Diseño" class="benefit-icon">
-        <p>Diseño web.</p>
-      </div>
-      <div class="service">
-        <img src="img/marketing.gif" alt="Ícono Marketing" class="benefit-icon">
-        <p>Marketing digital.</p>
-      </div>
-      <div class="service">
-        <img src="img/prensa.gif" alt="Ícono Prensa" class="benefit-icon">
-        <p>Prensa y comunicación.</p>
-      </div>
-      <div class="service">
-        <img src="img/community-manager.gif" alt="Ícono Community Manager" class="benefit-icon">
-        <p>Community manager.</p>
-      </div>
-      <div class="service">
-        <img src="img/consultoria.gif" alt="Ícono Consultoría" class="benefit-icon">
-        <p>Gestión comercial.</p>
-      </div>
-      <div class="service">
-        <img src="img/diseño-grafico.gif" alt="Ícono Diseño Gráfico" class="benefit-icon">
-        <p>Diseño gráfico.</p>
-      </div>
-    </div>
-  </section>
-
- <section id="contacto" class="contact">
-  <p>Estás a un clic de impulsar tu negocio.</p>
-  <h2>¿Quieres charlar con nosotros?</h2>
+  <!-- Menú Desplegable Móvil -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#002B54] border-t border-white/10 px-6 py-4 space-y-3 flex flex-col shadow-2xl">
+    <a class="mobile-nav-link text-white/90 hover:text-white font-semibold py-1.5 transition-colors" href="#home" data-i18n="nav.home">Home</a>
+    <a class="mobile-nav-link text-white/90 hover:text-white font-semibold py-1.5 transition-colors" href="#about" data-i18n="nav.about">About Us</a>
+    <a class="mobile-nav-link text-white/90 hover:text-white font-semibold py-1.5 transition-colors" href="#services" data-i18n="nav.services">Services</a>
+    <a class="mobile-nav-link text-white/90 hover:text-white font-semibold py-1.5 transition-colors" href="#contact" data-i18n="nav.contact">Contact</a>
+    <a class="mobile-nav-link text-white/90 hover:text-white font-semibold py-1.5 transition-colors" href="#Q&A" data-i18n="nav.qa">Q&A</a>
+    
+    <!-- Botón de contacto dentro del menú desplegable para móviles -->
+    <a class="mobile-nav-link mt-2 inline-block text-center bg-[#a33f00] text-white font-bold py-2.5 px-4 rounded-xl shadow-md" href="#contact" data-i18n="nav.cta">
+      Let's Talk
+    </a>
+  </div>
+</header>
   
-  <div class="contact-container">
-    <div class="contact-image">
-      <img src="img/trabajo.jpg" alt="Equipo trabajando">
-    </div>
+    <!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-24">
+  <!-- Fondo e Imagen -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-deep-navy/80 to-transparent z-10"></div>
+    <img class="w-full h-full object-cover" src="img/marketing-haras.png" alt="Hero background" />
+  </div>
 
-<form action="https://formsubmit.co/harasconsultingllc@gmail.com" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="text" name="empresa" placeholder="Empresa">
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="telefono" placeholder="Teléfono">
-      <input type="text" name="pais" placeholder="País">
-      <input type="text" name="rubro" placeholder="Rubro">
-      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <div class="relative z-20 max-w-container-max mx-auto px-8 md:px-16 lg:px-24 w-full">
+    <div class="max-w-[580px] space-y-6">
+    
+      <!-- Título Principal en 2 líneas exactas -->
+      <h1 class="text-3xl md:text-4xl lg:text-[2.45rem] font-extrabold text-white leading-[1.25] tracking-tight drop-shadow-md text-left">
+        <span data-i18n="hero.title_part1">Digital marketing consultant</span> 
+        <span class="text-secondary-fixed font-black block" data-i18n="hero.title_part2">with proven results.</span>
+      </h1>
+
+      <!-- Subtítulo en 2 líneas alineado al mismo contenedor -->
+      <p class="text-base md:text-[1.05rem] font-normal text-white/90 leading-relaxed font-body-md drop-shadow-sm text-left" data-i18n="hero.subtitle">
+        Tailored digital marketing strategies to ensure your brand stands out in a competitive and evolving market.
+      </p>
+
+      <!-- Botones CTA -->
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <a href="#contact" class="bg-[#a33f00] hover:bg-[#ff6f20] text-white px-7 py-3.5 rounded-xl font-bold text-base shadow-lg hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2" data-i18n="hero.btn_primary">
+          Boost your business
+          <span class="material-symbols-outlined text-lg">trending_up</span>
+        </a>
+        <a href="#services" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-white/20 transition-all duration-200 flex items-center justify-center" data-i18n="hero.btn_secondary">
+          Our services
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>
 
+<!-- About Us Section (Our DNA) -->
+<section id="about" class="py-20 bg-white overflow-hidden">
+  <div class="max-w-container-max mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    
+    <!-- Columna Izquierda: Imagen + Badge Flotante -->
+    <div class="relative order-2 lg:order-1">
+      <!-- Contenedor Imagen -->
+      <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+        <img class="w-full aspect-[4/3] object-cover" src="img/trabajo.png" alt="About us team" />
+      </div>
+      
+      <!-- Badge Flotante "100%" -->
+      <div class="absolute -bottom-5 -right-2 md:bottom-[-15px] md:right-[-15px] bg-white p-5 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.1)] border border-slate-100 max-w-[210px] z-10">
+        <p class="text-[#002B54] font-extrabold text-2xl md:text-3xl leading-none mb-1.5">100%</p>
+        <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider leading-snug" data-i18n="about.badge">
+          Commitment to your brand's success
+        </p>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Contenido y Características -->
+    <div class="order-1 lg:order-2 space-y-6">
+      <!-- Tag y Título -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-[#a33f00] mb-2" data-i18n="about.tag">OUR DNA</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#002B54] leading-tight" data-i18n="about.title">
+          Experts in digital innovation and organic growth.
+        </h2>
+      </div>
+
+      <!-- Descripción principal -->
+      <p class="text-slate-600 text-base leading-relaxed" data-i18n="about.description">
+        We are a digital marketing consulting firm committed to helping brands grow, consolidate, and stand out in the market. We combine creativity, analysis, and technology to design strategies that deliver tangible results.
+      </p>
+
+      <!-- Lista de Características con Cajas de Íconos -->
+      <div class="space-y-5 pt-2">
+        
+        <!-- Feature 1 -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#eef3f9] text-[#002B54] flex items-center justify-center shrink-0 border border-[#dce5f2] shadow-sm">
+            <span class="material-symbols-outlined text-2xl">groups</span>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#002B54] mb-0.5" data-i18n="about.feat1_title">Multidisciplinary Team</h3>
+            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about.feat1_desc">Specialists in advertising, social media, and web development ready for any challenge.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#eef3f9] text-[#002B54] flex items-center justify-center shrink-0 border border-[#dce5f2] shadow-sm">
+            <span class="material-symbols-outlined text-2xl">lightbulb</span>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#002B54] mb-0.5" data-i18n="about.feat2_title">Innovative Solutions</h3>
+            <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about.feat2_desc">We adapt the latest technological trends to the specific needs of your industry.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Services Section (Bento Grid con colores personalizados y efecto hover en texto) -->
+<section id="services" class="py-20 max-w-container-max mx-auto px-6 md:px-12 bg-[#f4f6fa]">
+  <!-- Encabezado -->
+  <div class="text-center mb-12">
+    <p class="text-xs font-bold uppercase tracking-widest text-[#a33f00] mb-2" data-i18n="services.tag">WHAT WE DO</p>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#002B54]" data-i18n="services.title">Solutions to Accelerate Your Growth</h2>
+  </div>
+
+  <!-- Bento Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+    
+    <!-- 1. Consulting & Management (Tu color: #c4dafa) -->
+    <div class="group md:col-span-7 bg-[#c4dafa] p-8 rounded-3xl border border-[#dce5f2] shadow-[0_8px_25px_rgba(0,43,84,0.04)] hover:shadow-[0_16px_35px_rgba(0,43,84,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
+      <div>
+        <div class="flex items-center gap-4 bg-white/90 p-3 px-4 rounded-2xl w-fit border border-[#dce5f2] shadow-sm mb-6">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-xs font-bold text-[#002B54]">Optimization Score</span>
+          </div>
+          <span class="text-xs font-black text-[#a33f00] bg-[#a33f00]/10 px-2.5 py-1 rounded-lg">98/100</span>
+        </div>
+
+        <h3 class="text-2xl font-bold text-[#002B54] mb-2" data-i18n="services.consulting_title">Marketing consulting and management for businesses.</h3>
+        
+        <!-- Texto con animación hover -->
+        <p class="text-slate-700 text-base leading-relaxed max-w-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.consulting_desc">
+          In-depth analysis of your business model to identify optimization and scalable growth opportunities.
+        </p>
+      </div>
+      
+      <a class="mt-4 inline-flex items-center gap-2 text-[#002B54] font-bold text-base group-hover:translate-x-1 transition-transform" href="#contact">
+        <span data-i18n="services.explore">Explore</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- 2. Web Design (Azul Marino Profundo) -->
+    <div class="group md:col-span-5 bg-[#002B54] text-white p-8 rounded-3xl shadow-[0_10px_30px_rgba(0,43,84,0.2)] hover:shadow-[0_18px_40px_rgba(0,43,84,0.3)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
+      <div class="w-full bg-white/10 backdrop-blur-md rounded-2xl p-3.5 border border-white/15 mb-4 shadow-inner">
+        <div class="flex items-center gap-1.5 mb-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-400/80"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/80"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400/80"></span>
+          <span class="ml-2 text-[10px] text-white/50 font-mono">harasconsultingllc.com</span>
+        </div>
+        <div class="h-2 w-1/3 bg-white/30 rounded mb-1.5"></div>
+        <div class="h-2 w-2/3 bg-white/20 rounded"></div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-2" data-i18n="services.web_title">UX/UI Design</h3>
+        
+        <!-- Texto con animación hover -->
+        <p class="text-white/90 text-base leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.web_desc">
+          UX/UI interfaces tailored to convert visitors into loyal clients.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3. Digital Marketing (Naranja Corporativo) -->
+    <div class="group md:col-span-4 bg-[#a33f00] text-white p-8 rounded-3xl shadow-[0_10px_30px_rgba(163,63,0,0.2)] hover:shadow-[0_18px_40px_rgba(163,63,0,0.3)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
+      <div class="bg-white/15 backdrop-blur-md p-3.5 rounded-2xl w-fit border border-white/20 mb-4 shadow-inner">
+        <p class="text-[10px] uppercase tracking-wider text-white/70 font-semibold">Average ROI</p>
+        <p class="text-2xl font-black text-white flex items-center gap-1">
+          +320%
+          <span class="material-symbols-outlined text-emerald-300 text-lg">trending_up</span>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-2" data-i18n="services.mkt_title">Digital Marketing</h3>
+        
+        <!-- Texto con animación hover -->
+        <p class="text-white/90 text-base leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.mkt_desc">
+          Omnichannel campaigns that resonate with your target audience.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4. Social Strategy (Gris Lavanda) -->
+    <div class="group md:col-span-5 bg-[#e8ecf4] p-8 rounded-3xl border border-[#d2d9e6] shadow-[0_8px_25px_rgba(0,43,84,0.04)] hover:shadow-[0_16px_35px_rgba(0,43,84,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
+      <div class="bg-white/90 p-3.5 rounded-2xl w-fit border border-[#d2d9e6] shadow-sm mb-4 flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-[#002B54]/10 flex items-center justify-center text-[#002B54]">
+          <span class="material-symbols-outlined text-xl">thumb_up</span>
+        </div>
+        <div>
+          <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Engagement Rate</p>
+          <p class="text-base font-black text-[#002B54] flex items-center gap-1">
+            4.8x <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+24%</span>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold text-[#002B54] mb-2" data-i18n="services.social_title">Community manager</h3>
+        
+        <!-- Texto con animación hover -->
+        <p class="text-slate-600 text-base leading-relaxed opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.social_desc">
+          Community management and content creation that drives genuine engagement and brand loyalty.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5. SEO & Positioning (Tu color: #ffd971) -->
+    <div class="group md:col-span-3 bg-[#ffd971] p-8 rounded-3xl border border-[#ebd0c3] shadow-[0_8px_25px_rgba(163,63,0,0.04)] hover:shadow-[0_16px_35px_rgba(163,63,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[260px] cursor-pointer">
+      <div class="bg-white/90 p-3.5 rounded-2xl shadow-sm mb-4 border border-[#ebd0c3]">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> #1 Google Rank
+          </span>
+          <span class="text-[10px] font-bold text-slate-500">+180%</span>
+        </div>
+        <div class="h-10 flex items-end gap-1.5 pt-2">
+          <div class="w-1/4 bg-[#002B54]/15 h-2/5 rounded-sm"></div>
+          <div class="w-1/4 bg-[#002B54]/30 h-3/5 rounded-sm"></div>
+          <div class="w-1/4 bg-[#002B54]/50 h-4/5 rounded-sm"></div>
+          <div class="w-1/4 bg-[#002B54] h-full rounded-sm"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold text-[#002B54] mb-2" data-i18n="services.seo_title">SEO & Positioning</h3>
+        
+        <!-- Texto con animación hover -->
+        <p class="text-slate-800 text-sm leading-relaxed text-justify opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="services.seo_desc">
+        Dominate search results and drive high-quality organic traffic continuously.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Why Choose Us Section -->
+<section class="py-20 bg-[#002B54] text-white overflow-hidden relative">
+  <!-- Capa de luz diagonal en el fondo -->
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2 pointer-events-none"></div>
+
+  <div class="max-w-container-max mx-auto px-6 md:px-12 relative z-10">
+    <!-- Encabezado -->
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight" data-i18n="why.title">
+        Why choose Haras Consulting?
+      </h2>
+      <p class="text-white/80 text-base font-normal leading-relaxed" data-i18n="why.subtitle">
+        We elevate your digital presence through a methodical and creative approach.
+      </p>
+    </div>
+
+    <!-- Grid de 3 Columnas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center">
+      
+      <!-- Columna 1: Estrategia Única -->
+  <div class="space-y-4 flex flex-col items-center">
+    <!-- Burbuja Circular con Imagen Strategy -->
+    <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center shadow-lg mb-2 transition-transform hover:scale-110 duration-300 overflow-hidden border border-white/20">
+      <img 
+        src="img/strategy.jpg" 
+        alt="Tailored Strategy" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <h3 class="text-xl font-bold text-white" data-i18n="why.item1_title">Customized strategy</h3>
+    <p class="text-white/75 text-sm leading-relaxed max-w-xs" data-i18n="why.item1_desc">
+      We design 100% customized plans, avoiding generic solutions to help you gain an edge and a competitive advantage.
+    </p>
+  </div>
+
+  <!-- Columna 2: Innovación Constante -->
+  <div class="space-y-4 flex flex-col items-center">
+    <!-- Burbuja Circular con Imagen Innovation -->
+    <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center shadow-lg mb-2 transition-transform hover:scale-110 duration-300 overflow-hidden border border-white/20">
+      <img 
+        src="img/innovation.jpg" 
+        alt="Constant Innovation" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <h3 class="text-xl font-bold text-white" data-i18n="why.item2_title">Constant innovation</h3>
+    <p class="text-white/75 text-sm leading-relaxed max-w-xs" data-i18n="why.item2_desc">
+      We implement cutting-edge tools to keep your business at the forefront of digital transformation.
+    </p>
+  </div>
+
+      <!-- Columna 3: Expertiz Probada -->
+<div class="space-y-4 flex flex-col items-center">
+  <!-- Burbuja Circular Rellena con la Imagen -->
+  <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center shadow-lg mb-2 transition-transform hover:scale-110 duration-300 overflow-hidden border border-white/20">
+    <img 
+      src="img/expertise.jpg" 
+      alt="Proven Expertise" 
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <h3 class="text-xl font-bold text-white" data-i18n="why.item3_title">Qualified experience</h3>
+  <p class="text-white/75 text-sm leading-relaxed max-w-xs" data-i18n="why.item3_desc">
+    Our team includes certified professionals with years of experience across various business verticals.
+  </p>
+</div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+<section id="contact" class="py-20 max-w-container-max mx-auto px-6 md:px-12 bg-[#f4f6fa] relative">
+  
+  <!-- Banner / Popup de Confirmación Flotante -->
+  <div id="formSuccess" class="fixed bottom-8 right-8 bg-[#002B54] text-white px-6 py-4 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-3 z-50 transition-all duration-500 opacity-0 pointer-events-none translate-y-10">
+    <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+      <span class="material-symbols-outlined text-xl">check_circle</span>
+    </div>
+    <div>
+      <p class="font-bold text-sm" data-i18n="form.success_title">Message Sent!</p>
+      <p class="text-xs text-white/80" data-i18n="form.success_desc">Thank you! We will contact you shortly.</p>
+    </div>
+  </div>
+
+  <!-- Tarjeta Contenedora Principal -->
+  <div class="bg-white rounded-3xl shadow-[0_15px_45px_rgba(0,0,0,0.06)] overflow-hidden grid grid-cols-1 lg:grid-cols-5 border border-slate-200/80">
+    
+    <!-- Columna Izquierda: Información de Contacto -->
+    <div class="lg:col-span-2 bg-[#eef2f7] p-8 md:p-12 flex flex-col justify-between border-r border-slate-200/60">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-[#002B54] mb-4 leading-tight text-left max-w-md" data-i18n="contact.title">
+        Contact us and create your new marketing strategy
+        </h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-8" data-i18n="contact.subtitle">
+          We are one click away from taking your business to the next level.
+        </p>
+
+        <!-- Datos directos -->
+        <div class="space-y-5">
+          <div class="flex items-center gap-3.5">
+            <span class="material-symbols-outlined text-[#a33f00] text-xl">mail</span>
+            <span class="text-sm font-semibold text-[#002B54]">harasconsultingllc@gmail.com</span>
+          </div>
+          <div class="flex items-center gap-3.5">
+            <span class="material-symbols-outlined text-[#a33f00] text-xl">phone_iphone</span>
+            <span class="text-sm font-semibold text-[#002B54]">+1 (954) 594-3461</span>
+          </div>
+          <div class="flex items-center gap-3.5">
+            <span class="material-symbols-outlined text-[#a33f00] text-xl">location_on</span>
+            <span class="text-sm font-semibold text-[#002B54]">United States</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones Directos (Correo y WhatsApp) -->
+      <div class="mt-10 pt-6 flex gap-3">
+        <a class="w-10 h-10 rounded-full bg-[#002B54] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm" href="mailto:harasconsultingllc@gmail.com" target="_blank" title="Email Us">
+          <span class="material-symbols-outlined text-lg">mail</span>
+        </a>
+        
+        <a class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm" href="https://wa.me/19545943461" target="_blank" title="WhatsApp Us">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Formulario con solo tus 5 campos -->
+    <div class="lg:col-span-3 p-8 md:p-12 bg-white">
+      <form action="https://formsubmit.co/harasconsultingllc@gmail.com" method="POST" id="contactForm" class="space-y-6">
+        
+        <input type="hidden" name="_subject" value="¡Nuevo mensaje desde Haras Consulting Website!">
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Fila 1: Nombre y Empresa -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="form.name">FULL NAME</label>
+            <input name="nombre" class="w-full bg-[#f4f6fa] border border-slate-200/80 rounded-xl p-3.5 text-sm text-[#002B54] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002B54] transition-all" data-i18n-placeholder="form.ph_name" placeholder="John Doe" type="text" required/>
+          </div>
+          <div class="space-y-2">
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="form.company">COMPANY</label>
+            <input name="empresa" class="w-full bg-[#f4f6fa] border border-slate-200/80 rounded-xl p-3.5 text-sm text-[#002B54] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002B54] transition-all" data-i18n-placeholder="form.ph_company" placeholder="Company Inc." type="text"/>
+          </div>
+        </div>
+
+        <!-- Fila 2: Correo y Teléfono -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="form.email">EMAIL ADDRESS</label>
+            <input name="email" class="w-full bg-[#f4f6fa] border border-slate-200/80 rounded-xl p-3.5 text-sm text-[#002B54] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002B54] transition-all" data-i18n-placeholder="form.ph_email" placeholder="john@company.com" type="email" required/>
+          </div>
+          <div class="space-y-2">
+            <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="form.phone">PHONE</label>
+            <input name="telefono" class="w-full bg-[#f4f6fa] border border-slate-200/80 rounded-xl p-3.5 text-sm text-[#002B54] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002B54] transition-all" data-i18n-placeholder="form.ph_phone" placeholder="+1 (555) 000-0000" type="tel"/>
+          </div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="space-y-2">
+          <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="form.message">MESSAGE</label>
+          <textarea name="mensaje" class="w-full bg-[#f4f6fa] border border-slate-200/80 rounded-xl p-3.5 text-sm text-[#002B54] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002B54] transition-all resize-none" data-i18n-placeholder="form.ph_message" placeholder="Tell us about your project..." rows="4" required></textarea>
+        </div>
+
+        <!-- Botón Enviar -->
+        <button class="w-full bg-[#002B54] hover:bg-[#00386c] text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-sm tracking-wide" type="submit">
+          <span data-i18n="form.submit">Send Message</span>
+          <span class="material-symbols-outlined text-base">send</span>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Section (Frequently Asked Questions) -->
+<section id="Q&A" class="py-20 max-w-container-max mx-auto px-6 md:px-12 bg-[#f4f6fa]">
+  
+  <!-- Encabezado de la sección -->
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <p class="text-xs font-bold uppercase tracking-widest text-[#a33f00] mb-2" data-i18n="faq.tag">FREQUENTLY ASKED QUESTIONS</p>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#002B54]" data-i18n="faq.title">Got Questions? We Have Answers</h2>
+  </div>
+
+  <!-- Contenedor de Acordeones -->
+<div class="max-w-3xl mx-auto space-y-4">
+
+  <!-- Pregunta 1 -->
+  <details name="faq" class="group bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden transition-all duration-300">
+    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer font-extrabold text-[#002B54] text-base md:text-lg list-none select-none hover:bg-slate-50 transition-colors">
+      <span data-i18n="faq.q1">What services are included in Haras Consulting plans?</span>
+      <span class="material-symbols-outlined text-[#002B54] transition-transform duration-300 group-open:rotate-180">expand_more</span>
+    </summary>
+    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq.a1">
+      We offer end-to-end digital growth solutions, including strategic consulting, custom web design, omnichannel marketing campaigns, social media management, and SEO positioning tailored to your business goals.
+    </div>
+  </details>
+
+  <!-- Pregunta 2 -->
+  <details name="faq" class="group bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden transition-all duration-300">
+    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer font-extrabold text-[#002B54] text-base md:text-lg list-none select-none hover:bg-slate-50 transition-colors">
+      <span data-i18n="faq.q2">Is this suitable if my business is just starting out?</span>
+      <span class="material-symbols-outlined text-[#002B54] transition-transform duration-300 group-open:rotate-180">expand_more</span>
+    </summary>
+    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq.a2">
+      Absolutely. We build foundational digital strategies for startups and early-stage companies to establish a strong brand identity, set up high-converting landing pages, and launch targeted initial acquisition campaigns.
+    </div>
+  </details>
+
+  <!-- Pregunta 3 -->
+  <details name="faq" class="group bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden transition-all duration-300">
+    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer font-extrabold text-[#002B54] text-base md:text-lg list-none select-none hover:bg-slate-50 transition-colors">
+      <span data-i18n="faq.q3">What happens if I already have active social media and marketing channels?</span>
+      <span class="material-symbols-outlined text-[#002B54] transition-transform duration-300 group-open:rotate-180">expand_more</span>
+    </summary>
+    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq.a3">
+      We conduct a comprehensive audit of your current channels to identify bottlenecks and conversion leaks. Then, we optimize your existing assets to maximize return on ad spend (ROAS) and engagement.
+    </div>
+  </details>
+
+  <!-- Pregunta 4 -->
+  <details name="faq" class="group bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden transition-all duration-300">
+    <summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer font-extrabold text-[#002B54] text-base md:text-lg list-none select-none hover:bg-slate-50 transition-colors">
+      <span data-i18n="faq.q4">How do we work together after the initial project phase?</span>
+      <span class="material-symbols-outlined text-[#002B54] transition-transform duration-300 group-open:rotate-180">expand_more</span>
+    </summary>
+    <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4" data-i18n="faq.a4">
+      After launching your initial campaign or platform, we offer monthly recurring management and performance tracking retainers to continually optimize metrics, create content, and scale your overall growth.
+    </div>
+  </details>
+
+</div>
+</section>
+
+  </main>
 
   <!-- Footer -->
- <footer>
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="img/Haraspqñ.png" alt="Logo Consulting Services" />
+<footer class="bg-[#002B54] text-white py-6 border-t border-white/10">
+  <div class="max-w-container-max mx-auto px-6 flex flex-col items-center text-center space-y-3">
+    
+    <!-- Logo Grande pero con Footer Ajustado y Compacto -->
+    <a href="#home" class="flex items-center justify-center hover:opacity-95 transition-opacity overflow-hidden -my-6">
+      <img src="img/Haras.png" alt="Haras Consulting Logo" style="height: 180px; width: auto;" class="object-contain filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]" />
+    </a>
+
+    <!-- Navegación del Footer -->
+    <div class="flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-wider text-white/80">
+      <a class="hover:text-white transition-colors" href="#home" data-i18n="nav.home">Home</a>
+      <a class="hover:text-white transition-colors" href="#about" data-i18n="nav.about">About Us</a>
+      <a class="hover:text-white transition-colors" href="#services" data-i18n="nav.services">Services</a>
+      <a class="hover:text-white transition-colors" href="#contact" data-i18n="nav.contact">Contact</a>
+      <a class="hover:text-white transition-colors" href="#Q&A" data-i18n="nav.qa">Q&A</a>
     </div>
 
-    <div class="socials">
-      <a href="mailto:harasconsultingllc@gmail.com" target="_blank">
-        <img src="img/gmail.png" alt="Gmail">
-      </a>
-      <a href="https://wa.me/19545943461" target="_blank">
-        <img src="img/whatsapp.png" alt="whatsapp">
-      </a>
-    </div>
+    <!-- Copyright & Privacidad -->
+    <p class="text-xs text-white/60 font-medium pt-2 border-t border-white/10 w-full max-w-md">
+      © 2025 Haras Consulting Services | 
+      <a class="underline hover:text-white transition-colors" href="#" data-i18n="footer.privacy">Privacy Policy</a>
+    </p>
 
-    <div class="footer-nav">
-      <a href="#nosotros">Sobre Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Consulting Services | <a href="#privacidad">Política de Privacidad</a></p>
   </div>
 </footer>
 
-<button id="scrollUpBtn">
-  <img src="img/flecha-arriba.png" alt="Ir arriba">
-</button>
-
-<!-- Popup de confirmación -->
-<div id="formSuccess" class="popup">
-  <div class="popup-content">
-    <p>¡Gracias por tu mensaje! Nos pondremos en contacto pronto.</p>
-    <button onclick="closePopup()">Cerrar</button>
-  </div>
-</div>
-
-
-  <script src="scripts.js"></script>
+  <!-- Scripts JavaScript -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

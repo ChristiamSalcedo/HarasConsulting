@@ -1,0 +1,17 @@
+/* Layout Spacing Utility Aliases */
+.py-section-gap-lg {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .py-section-gap-lg {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+/* Container max-width fallback */
+.max-w-container-max {
+  max-width: 1280px;
+}

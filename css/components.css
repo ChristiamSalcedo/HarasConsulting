@@ -1,0 +1,125 @@
+/* Header Principal con Difuminado (Glassmorphism) */
+.main-header {
+  background-color: rgba(0, 43, 84, 0.88) !important; 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  height: 74px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  border-bottom: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Contenedor alineado con márgenes laterales */
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo con tamaño ampliado para legibilidad */
+.header-logo {
+  height: 190px; 
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Menú Centrado */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-nav .nav-link {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link.active {
+  color: #ffffff;
+  border-bottom: 2px solid #a33f00;
+}
+
+/* Botón Let's Talk Naranja */
+.btn-cta {
+  background-color: #a33f00 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.btn-cta:hover {
+  background-color: #ff6f20 !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(255, 111, 32, 0.4);
+}
+
+/* Selector de Idioma */
+.btn-lang {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 14px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s ease;
+}
+
+.btn-lang:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* Glass Card Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Interactive Hover Effects */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Input Styles Focus States */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
+}
